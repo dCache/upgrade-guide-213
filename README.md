@@ -52,9 +52,9 @@ when upgrading, even though most of them are cosmetic - they improve the
 consistency of dCache and thus ease the configuration, but those changes
 do not fundamentally affect how dCache works.
 
-dCache     pools from version 2.10 can be mixed with services from dCache 2.13.     This enables a staged roll-out in which non-pool nodes are upgraded     to 2.13 first, followed by pools later. It is however recommended to     upgrade to the latest version of 2.10 before performing a staged     roll-out.
+dCache pools from version 2.10 can be mixed with services from dCache 2.13. This enables a staged roll-out in which non-pool nodes are upgraded     to 2.13 first, followed by pools later. It is however recommended to     upgrade to the latest version of 2.10 before performing a staged     roll-out.
 
-`Upgrading     directly from versions prior to 2.10 is not officially supported. If     you run versions before 2.10, we recommend upgrading to 2.10 first.     That is not to say that upgrading directly to 2.13``     ``is     not possible, but we have not explicitly tested nor documented such     an upgrade path.`
+Upgrading directly from versions prior to 2.10 is not officially supported. If you run versions before 2.10, we recommend upgrading to 2.10 first.     That is not to say that upgrading directly to 2.13``     ``is     not possible, but we have not explicitly tested nor documented such     an upgrade path.
 
 Downgrading after upgrade is not possible without manual intervention:
 In particular database schemas have to be rolled back *before*
@@ -1022,10 +1022,8 @@ Threading issues preventing the alarm service from running in the same
 domain as other services have been corrected so that it is now safe to
 do so. Two new properties have been added:
 
-`alarms.limits.workers                 ` 
-:   Number of worker threads for processing incoming logging events.
-
-`alarms.db.alarms-only                 `
+    `alarms.limits.workers` # Number of worker threads for processing incoming logging events.
+    `alarms.db.alarms-only                 `
 
 Only store alarms to the persistent store
 
