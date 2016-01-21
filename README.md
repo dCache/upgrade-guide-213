@@ -1538,21 +1538,28 @@ Chimera schema by hand are no longer shipped with dCache.
 
 Schema changes are automatically applied the first time a service using
 the schema is started. Such changes may also be applied manually before
-starting dCache using the `dcache     database update` command. It will
+starting dCache using the `dcache database update` command. It will
 update the schemas of all databases used by services configured on the
 current node.
 
 For even more hands-on schema management, the
-`dcache     database showUpdateSQL` command was added. It outputs the
-SQL that would be executed if
-`dcache     ``database update``     ``was     executed. The emitted SQL may be applied manually to the database,     thereby updating the schema.`
+`dcache database showUpdateSQL` command was added. It outputs the
+SQL that would be executed if `dcache` database update was executed. 
+The emitted SQL may be applied manually to the database, thereby updating the schema.
 
-`Before     downgrading dCache, it is essential that schema changes are rolled     back to the earlier version. This needs to be done ``before``     ``installing     the earlier version of dCache. Schema changes can be rolled back     using the ``dcache database     rollbackToDate`
-`command.     It is important to remember the date the schema changes where     applied in the first place so that it can be rolled back to the     version prior to the upgrade.`
+Before downgrading dCache, it is essential that schema changes are rolled 
+back to the earlier version. This needs to be done *before* installing the 
+earlier version of dCache. Schema changes can be rolled back using the 
+`dcache database rollbackToDate` command. It is important to remember 
+the date the schema changes where applied in the first place so that 
+it can be rolled back to the version prior to the upgrade.
 
-`NOTE     The ``nfs``     ``service     does not automatically apply schema changes to Chimera - only the     ``pnfsmanager``     ``service     does that. ``nfs``     ``will     however check whether the Chimera schema is current and refuse to     start if not. One consequence of this is that if ``nfs`
-`and`
-`pnfsmanager``     ``run     in the same domain, either ``nfs``     ``must     be placed after ``pnfsmanager``     ``in     the layout file or the changes must be applied manually using ``dcache     database update`.
+*NOTE*  The `nfs` service does not automatically apply schema changes 
+to Chimera - only the `pnfsmanager` service does that. `nfs` will however 
+check whether the Chimera schema is current and refuse to start if not. 
+One consequence of this is that if `nfs` and `pnfsmanager` run in the 
+same domain, either `nfs` must be placed after `pnfsmanager` in  the 
+layout file or the changes must be applied manually using `dcache database update`.
 
 Schema Changes
 --------------
