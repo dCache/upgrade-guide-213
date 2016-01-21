@@ -671,25 +671,26 @@ round trip time.
 
 #### Webadmin HTML contains dCache version
 
-`The     webadmin now includes a meta tag reporting the dCache version.`
+The webadmin now includes a meta tag reporting the dCache version.
 
 #### Webadmin features improved navigation bar
 
-`The     navigation bar now disables the links to disabled pages.`
+The navigation bar now disables the links to disabled pages.
 
 #### Webadmin no longer exports the info service
 
-`The     info service can no longer be access through webadmin. The info     service is still exposed through the ``/info``     ``path     of the httpd service and this is the preferred interface for scripts     and other services to query the info service.`
+The `info` service can no longer be access through webadmin. The `info` service 
+is still exposed through the `/info` path of the `httpd` service and this is the 
+preferred interface for scripts and other services to query the info service.
 
 #### Updated httpd service configuration
 
-T`he     httpd service has been heavily refactored. The ``set     update`
-`command     that was lost in previous releases is once again exposed in the     admin shell. The arguments to the `‘`set     webapp`’
-`command     have changed, which means that sites having a custom `httpd.conf
-`file     likely have to adjust the configuration on update.`
+The `httpd` service has been heavily refactored. The `set update`
+command that was lost in previous releases is once again exposed in the `admin` shell.
+The arguments to the `set webapp` command have changed, which means that sites 
+having a custom `httpd.conf` file likely have to adjust the configuration on update.
 
-`The`
-`httpd.container.webapps.tmp-dir``     ``property     is obsolete as WAR files are no longer unpacked.`
+The `httpd.container.webapps.tmp-dir` property is obsolete as WAR files are no longer unpacked.
 
 ### SpaceManager changes
 
